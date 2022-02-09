@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://UI/End_Game.gd" type="Script" id=1]
+
+[node name="End_Game" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+align = 1
+valign = 1
+
+[node name="Playagain" type="Button" parent="."]
+margin_left = 463.0
+margin_top = 333.0
+margin_right = 563.0
+margin_bottom = 373.0
+text = "Play again?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="."]
+margin_left = 463.0
+margin_top = 400.0
+margin_right = 563.0
+margin_bottom = 440.0
+text = "Quit"
+
+[connection signal="pressed" from="Playagain" to="." method="_on_Playagain_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
